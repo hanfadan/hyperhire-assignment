@@ -40,13 +40,18 @@ export default function HeroSection() {
         </div>
 
         {/* Swiper Section */}
-        <div className="relative w-full lg:w-1/2 mt-12 lg:mt-0">
+        <div className="relative w-full lg:w-1/2 mt-12">
           {/* Logo Hijau di Atas */}
           <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 flex items-center justify-center bg-[#E6FFF5] text-[#26C2B9] px-4 py-2 rounded-full shadow-md z-20">
             <img src="/images/icon-dollar.png" alt="Currency" className="w-4 h-4 mr-2" />
             <span className="font-semibold">월 100만원</span>
           </div>
-
+          {/* Navigation Arrows */}
+          <div className="swiper-button-prev z-30 absolute top-1/2 -left-10 transform -translate-y-1/2 cursor-pointer">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M15 19L8 12L15 5" stroke="#288BE7" strokeWidth="2" />
+            </svg>
+          </div>
           {/* Swiper */}
           <Swiper
             modules={[Navigation, Pagination]}
@@ -115,12 +120,7 @@ export default function HeroSection() {
             ))}
           </Swiper>
 
-          {/* Navigation Arrows */}
-          <div className="swiper-button-prev z-30 absolute top-1/2 -left-10 transform -translate-y-1/2 cursor-pointer">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M15 19L8 12L15 5" stroke="#288BE7" strokeWidth="2" />
-            </svg>
-          </div>
+
           <div className="swiper-button-next z-30 absolute top-1/2 -right-10 transform -translate-y-1/2 cursor-pointer">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M9 19L16 12L9 5" stroke="#288BE7" strokeWidth="2" />
